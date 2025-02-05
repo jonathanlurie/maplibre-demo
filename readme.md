@@ -1,5 +1,5 @@
 # Maplibre Fun Globe
-![](image.png)
+![](images/image.png)
 Since `v5`, Maplibre is able to display a globe and not only a square-shaped Mercator map. The good thing (sort of) is that it still feed on Mercator tiles, so no need to change the data provider.
 
 ## This demo project
@@ -26,7 +26,7 @@ And open your browser at the URL (localhost) printed in the terminal
 
 ## Implementation details
 ### 🗺️ Adding a map:
-![alt text](image-1.png)
+![](images/image-1.png)
 ```ts
 // Importing Maplibre + style
 import {Map as MLMap} from "maplibre-gl";
@@ -58,7 +58,7 @@ map.on("load", () => {
 ```
 
 ### 🏔️ Terrain
-![alt text](image-2.png)
+![](images/image-2.png)
 Bump some terrain from a terrain RGB tile source:
 ```ts
 const terrainSourceId = "maptiler-terrain-source";
@@ -94,8 +94,8 @@ map.removeSource(terrainSourceId);
 ```
 
 ### 🌆 Sky and fog 🌁
-![alt text](image-3.png)
-![alt text](image-4.png)
+![](images/image-3.png)
+![](images/image-4.png)
 
 
 This consists setting three colors: **sky**, **horizon** and **fog**, as well as blending factors.
@@ -140,7 +140,7 @@ The blending factors and colors can be fixed (like above) or **expressions** tha
 ##Note:## This is not working in globe mode 🙁 (yet)
 
 ### 🌐 Globe mode
-![alt text](image-5.png)
+![](images/image-5.png)
 
 There are two projections: Mercator (the default) and globe. To enable the globe:
 
@@ -158,7 +158,7 @@ map.setProjection({
 ```
 
 ### 🌅 Atmosphere haze and light
-![alt text](image-6.png)
+![](images/image-6.png)
 
 It's possible to enable some light on the globe (not working on Mercator)
 ```ts
@@ -199,5 +199,5 @@ This works also pretty well with hybrid images:
 map.setStyle(`https://api.maptiler.com/maps/hybrid/style.json?key=${import.meta.env.VITE_MAPTILER_API_KEY}`);
 
 ```
-![alt text](image-7.png)
+![](images/image-7.png)
 
